@@ -1,0 +1,459 @@
+.logo-center {
+  width: 400px;
+  height: auto;
+  margin: 0 auto 0;
+  margin-bottom: -70px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 1s ease;
+}
+
+.content.visible {
+  max-height: 1000px; /* Ajusta si el contenido es muy largo */
+  opacity: 1;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  flex: 1;
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  display: block; /* Importante que no esté "none" para animar */
+}
+
+.section-content.active {
+  max-height: 1000px; /* o lo que necesites */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#toggle-portfolio {
+  background-color: transparent;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+
+.visible {
+  max-height: 1000px; /* Ajusta según el contenido */
+  opacity: 1;
+}
+
+
+.about-header {
+  margin-top: 0.5rem;
+}
+
+#toggle-about {
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+
+.about-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.foto-personal {
+  width: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-text {
+  color: white;
+  font-size: 0.95rem;
+}
+
+.Subtituloportfolio {
+  font-size: 2.4rem;
+}
+
+.TituloBAP {
+  color: #ff0000;
+}
+
+/* Estilos de los logos que acompañan los titulos*/
+.material-symbols-outlined.icono{
+  font-size: 2.8rem;
+  vertical-align: middle;
+}
+
+#services .enable-services {
+  font-size: 1.5rem;
+}
+
+#services .contact-message {
+  margin-top: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #ff0000;
+}
+
+/* estilo del sobre mi*/
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Acomoda mejor en pantallas pequeñas */
+}
+
+.foto-personal {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text p {
+  font-size: 1.3rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Fuente cursiva para títulos */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+h2, h3 {
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+    font-weight: normal;
+
+  }
+
+  /* General */
+body {
+    margin: 0;
+    font-family: 'oswald', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+}
+  
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* puedes ajustar la opacidad */
+  z-index: -1;
+}
+
+  
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Para compatibilidad */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, padding 0.3s ease;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  transform-origin: top center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subtitle-BAP {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.Name-creators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 auto;
+  width: fit-content; /* o un ancho específico */
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out, color 0.2s ease-in-out;
+  gap: 0.5rem;
+}
+
+.Name-creators:hover {
+  margin: 0 auto;
+  width: fit-content; /* o un ancho específico */
+  transform: scale(1.10);
+  color: #ff0000;
+}
+
+.subtitle {
+    color: #ccc;
+    font-size: 1.2rem;
+  }
+  
+section {
+    padding: 0.5rem;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+p {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: #ffffff;
+  margin-block-start: 0.5rem;
+  margin-block-end: 2.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.3rem;
+  }
+  
+h3 {
+    color: #dddddd;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+.description {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  
+.gallery {
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  
+.gallery img {
+    width: 300px;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.7s ease-in-out;
+  }
+  
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 70px rgba(0, 0, 0, 0.6); /* Sombra oscura */
+}
+
+#flyers-content {
+  border-bottom: 1px solid #555;
+  margin-bottom: 2.5rem;
+}
+
+ul {
+    font-size: 1.3rem;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #ccc;
+  }
+  
+a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ff0000; /* color inicial */
+  margin-left: auto;
+  transition: color 0.4s ease;
+}
+
+/* Al hacer clic (estado activo) */
+.toggle-btn.active {
+  color: white;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3); /* fondo translúcido */
+  backdrop-filter: blur(12px); /* desenfoque tipo vidrio */
+  -webkit-backdrop-filter: blur(12px); /* para Safari */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* línea superior sutil */
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3); /* sombra hacia arriba */
+  color: #ccc;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
+}
+
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Espacio entre íconos */
+  padding: 1rem 0;
+}
+
+.footer-icon {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  filter: invert(100%) brightness(1.2); /* convierte íconos negros en blancos */
+}
+
+/* Hover visual: agranda el icono y cambia el color a rojo */
+.footer-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(91%) saturate(6765%) hue-rotate(355deg) brightness(93%) contrast(104%);
+}
+
+
+/*Codigo optimizado para telefonos*/
+
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 0;
+  }
+
+  footer {
+    padding: 0;
+  }  
+
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foto-personal {
+    width: 80%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .Name-creators {
+    font-size: 1.8rem;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  h3 {
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+  }
+
+  .about-text p {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .Subtituloportfolio{
+    font-size: 1.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #services .enable-services {
+    font-size: 1.3rem;
+    padding-left: 40px;
+  }
+
+  #services .contact-message {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+  }
+
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+}
+
