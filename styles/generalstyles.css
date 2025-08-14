@@ -261,6 +261,10 @@ p {
   margin-block-end: 2.5rem;
 }
 
+.p-description-services {
+  margin-block-end: 1.5rem;
+}
+
 h2 {
     font-size: 2.2rem;
     color: #ffffff;
@@ -303,6 +307,11 @@ h3 {
 }
 
 #flyers-content {
+  border-bottom: 1px solid #555;
+  margin-bottom: 2.5rem;
+}
+
+#miniatura-content {
   border-bottom: 1px solid #555;
   margin-bottom: 2.5rem;
 }
@@ -375,6 +384,93 @@ footer {
   transform: scale(1.2);
   filter: brightness(0) saturate(100%) invert(36%) sepia(91%) saturate(6765%) hue-rotate(355deg) brightness(93%) contrast(104%);
 }
+
+.video-card {
+  position: relative;
+  display: inline-block;
+}
+
+.video-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.video-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.253);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+#welcome-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Para compatibilidad */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 90%;
+    width: auto;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 9999;
+    font-size: 1.3rem;
+}
+
+#welcome-notification img.welcome-logo {
+    width: 70px;
+    height: auto;
+}
+
+#welcome-notification.welcome-show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#welcome-notification .welcome-text {
+    flex: 1;
+    line-height: 1.4;
+}
+
+#welcome-notification .welcome-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+/* Cuando está visible */
+#welcome-notification.welcome-show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Cuando está oculto */
+#welcome-notification.welcome-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 
 /*Codigo optimizado para telefonos*/
@@ -455,5 +551,21 @@ footer {
     max-width: 320px;
     height: auto;
   }
+
+  .video-tag {
+    font-size: 0.6rem;
+  }
+
+  #welcome-notification {
+    font-size: 1rem;
+    width: 90%;           /* Ancho adaptado */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #welcome-notification .welcome-logo {
+    max-width: 3rem; /* Logo más pequeño en móvil */
+  }
+
 }
 

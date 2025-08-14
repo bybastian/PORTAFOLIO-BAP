@@ -19,4 +19,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Aquí agregamos el toggle para Portafolio
   setupToggle('toggle-portfolio', 'portfolio-content');
 });
-
